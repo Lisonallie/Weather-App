@@ -10,9 +10,7 @@ input.addEventListener("keypress", function(e) {
 
 async function getWeather() {
         let city = input.value;
-        let api = `http://api.openweathermap.org/data/2.5/weather?q=${city}&mode=json&APPID=${key}`;
+        let api = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&mode=json&APPID=${key}`;
         let response = await axios.get(api);
+        console.log(response.data.list[0].main.temp)
 }
-
-
-getWeather();
