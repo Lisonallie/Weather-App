@@ -2,6 +2,12 @@ const key = "00c6cccdf21220d91f2568a81e29690e";
 const button = document.getElementById("button");
 const input = document.getElementById("input");
 
+input.addEventListener("keypress", function(e) {
+    if (e.keyCode == 13 || e.which == 13) {
+        getWeather();
+    }
+});
+
 function getWeather() {
     button.addEventListener("click", async function() {
         let city = input.value;
@@ -10,4 +16,6 @@ function getWeather() {
         console.log(response.data);
     });
 }
+
+
 getWeather();
