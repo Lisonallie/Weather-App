@@ -4,6 +4,10 @@ const input = document.getElementById("input");
 
 function getWeather() {
     submit[0].addEventListener("keypress", async function() {
-        
-    })
+        let city = input.value;
+        let api = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&mode=json&APPID=${key}`;
+        let response = await axios.get(api);
+        console.log(response.data);
+    });
 }
+getWeather();
