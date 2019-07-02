@@ -1,10 +1,11 @@
 *{
     font-family: 'Nunito', sans-serif;
+    letter-spacing: 1px;
 }
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 #weather-container {
     width: 100vw;
@@ -17,7 +18,6 @@ body {
 }
 
 .input {
-    width: 100vw;
     display: flex;
 }
 
@@ -26,20 +26,20 @@ input {
     font-size: 20px;
     text-align: center;
     margin: 60px auto;
+    color: rgb(113, 114, 116);
 }
 
 .mother-box {
+    visibility: hidden;
     display: flex;
     margin: 0 auto;
-    width: 85vw;
-    height: 80vh;
+    height: 70vh;
 }
 
 .weather-box {
-    /* display: none; */
     width: 18%;
     height: 70%;
     background-color: rgb(92, 149, 187);
     margin: 0 auto;
-    /* display: inline-block; */
+    text-align: center;
 }
