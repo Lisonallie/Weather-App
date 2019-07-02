@@ -23,14 +23,14 @@ async function getWeather() {
     let city = input.value;
     let api = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&mode=json&APPID=${key}`;
     let response = await axios.get(api);
-    console.log(response.data.list[0].main)
+    console.log(response.data.list)
 
     for (i = 0; i < forecast.length; i++) {
         forecast[0].innerHTML = JSON.stringify(response.data.list[0].main.temp);
-        // forecast[1].innerHTML = JSON.stringify(response.data.list[1].main);
-        // forecast[2].innerHTML = JSON.stringify(response.data.list[2].main);
-        // forecast[3].innerHTML = JSON.stringify(response.data.list[3].main);
-        // forecast[4].innerHTML = JSON.stringify(response.data.list[4].main);
+        forecast[1].innerHTML = JSON.stringify(response.data.list[8].main.temp);
+        forecast[2].innerHTML = JSON.stringify(response.data.list[16].main.temp);
+        forecast[3].innerHTML = JSON.stringify(response.data.list[24].main.temp);
+        forecast[4].innerHTML = JSON.stringify(response.data.list[32].main.temp);
     }
 
 
