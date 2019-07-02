@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="weather-container">
-        <input type="text" placeholder="Please enter your city." id="input">
-        <div class="weather box"></div>
-        <div class="weather box"></div>
-        <div class="weather box"></div>
-        <div class="weather box"></div>
-        <div class="weather box"></div>
+        <div class="input">
+            <input type="text" placeholder="Please enter your city." id="input">
+        </div>
+        <div class="mother-box">
+            <div class="weather-box"></div>
+            <div class="weather-box"></div>
+            <div class="weather-box"></div>
+            <div class="weather-box"></div>
+            <div class="weather-box"></div>
+        </div>
 
     </div>
 
@@ -24,4 +31,5 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </body>
+
 </html>
