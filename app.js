@@ -26,11 +26,11 @@ async function getWeather() {
     console.log(response.data.list)
 
     for (i = 0; i < forecast.length; i++) {
-        forecast[0].innerHTML = JSON.stringify(response.data.list[0].main.temp);
-        forecast[1].innerHTML = JSON.stringify(response.data.list[8].main.temp);
-        forecast[2].innerHTML = JSON.stringify(response.data.list[16].main.temp);
-        forecast[3].innerHTML = JSON.stringify(response.data.list[24].main.temp);
-        forecast[4].innerHTML = JSON.stringify(response.data.list[32].main.temp);
+        forecast[0].innerHTML = JSON.stringify(Math.floor(response.data.list[0].main.temp));
+        forecast[1].innerHTML = JSON.stringify(Math.floor(response.data.list[8].main.temp));
+        forecast[2].innerHTML = JSON.stringify(Math.floor(response.data.list[16].main.temp));
+        forecast[3].innerHTML = JSON.stringify(Math.floor(response.data.list[24].main.temp));
+        forecast[4].innerHTML = JSON.stringify(Math.floor(response.data.list[32].main.temp));
     }
 
 

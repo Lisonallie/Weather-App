@@ -42,4 +42,7 @@ input {
     background-color: rgb(92, 149, 187);
     margin: 0 auto;
     text-align: center;
+    font-size: 50px;
+    color: rgb(247, 247, 247);
+    font-weight: bold;
 }
