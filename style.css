@@ -49,3 +49,7 @@ input {
     color: rgb(247, 247, 247);
     font-weight: bold;
 }
+.icon {
+    width: 120px;
+    height: 120px;
+}
