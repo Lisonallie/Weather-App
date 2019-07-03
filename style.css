@@ -39,15 +39,16 @@ input {
 .weather-box {
     width: 18%;
     height: 70%;
-    background-color: rgb(92, 149, 187);
+    background-color: rgb(200, 250, 243);
     margin: 0 auto;
 }
 
 .weathertext {
     text-align: center;
     font-size: 40px;
-    color: rgb(247, 247, 247);
+    color: rgb(241, 122, 86);
     font-weight: bold;
+    margin-top: 20px;
 }
 .icon {
     width: 120px;

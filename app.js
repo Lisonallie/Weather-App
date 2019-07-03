@@ -3,7 +3,6 @@ const input = document.getElementById("input");
 let motherBox = document.getElementById("mother-box");
 let forecast = document.querySelectorAll(".weathertext");
 let img = document.querySelectorAll(".icon");
-let counter = 0
 
 
 input.addEventListener("keypress", function (e) {
@@ -18,6 +17,8 @@ async function getWeather() {
     let city = input.value;
     let api = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&mode=json&APPID=${key}`;
     let response = await axios.get(api);
+    let counter = 0
+
 
     for (let i = 0; i < 40; i += 8) {
         let icon = response.data.list[i].weather[0].icon;
@@ -32,7 +33,6 @@ async function getWeather() {
         img[counter].src = iconsUrl;
 
         forecast[counter].appendChild(img[counter]);
-        console.log(img[counter].src);
         // counter += 8;
         // console.log(img[i].src)
         counter++
