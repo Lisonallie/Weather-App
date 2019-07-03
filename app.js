@@ -3,6 +3,8 @@ const input = document.getElementById("input");
 let motherBox = document.getElementById("mother-box");
 let forecast = document.querySelectorAll(".weather-box");
 let weather = [];
+let counter = 0;
+let imgIcon = document.getElementsByClassName("icon");
 // let dayOne = [];
 // let dayTwo = [];
 // let dayThree = [];
@@ -25,14 +27,19 @@ async function getWeather() {
     let response = await axios.get(api);
     console.log(response.data.list[0])
 
-    for (i = 0; i < forecast.length; i++) {
-        let icon1 = response.data.list[0].weather[0].icon
+    for (i = 0; i < 5; i++) {
+        icon = response.data.list[counter].weather[0].icon
+        let temp = Math.floor(response.data.list[counter].main.temp);
+        let hi = Math.floor(response.data.list[counter].main.temp_max);
+        let lo = Math.floor(response.data.list[counter].main.temp_min);
+        imgIcon[i].src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
-        forecast[0].innerHTML = Math.floor(response.data.list[0].main.temp) + '<br> HI: ' + Math.floor(response.data.list[0].main.temp_max) + '<br> LO: ' + Math.floor(response.data.list[0].main.temp_min) + '<br>' + new URL(`http://openweathermap.org/img/wn/${icon1}@2x.png`);
-        forecast[1].innerHTML = Math.floor(response.data.list[8].main.temp);
-        forecast[2].innerHTML = Math.floor(response.data.list[16].main.temp);
-        forecast[3].innerHTML = Math.floor(response.data.list[24].main.temp);
-        forecast[4].innerHTML = Math.floor(response.data.list[32].main.temp);
+        forecast[i].innerHTML = temp + '<br>' + hi + '<br>' + lo + '<br>';
+
+
+        
+
+        counter =+ 8;
     }
 
 
