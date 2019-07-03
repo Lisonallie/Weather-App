@@ -24,14 +24,15 @@ async function getWeather() {
         let temp = Math.floor(response.data.list[i].main.temp);
         let hi = Math.floor(response.data.list[i].main.temp_max);
         let lo = Math.floor(response.data.list[i].main.temp_min);
-        let iconsUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
-
-        img[counter].src = iconsUrl;
-        console.log(img[counter].src);
         
         // same as    forecast[i].innerHTML = temp + '<br>' + hi + '<br>' + lo + '<br>';
         forecast[counter].innerHTML = `${temp}<br> HI: ${hi}<br> LO: ${lo}`;
-        forecast[counter].appendChild(iconsUrl[counter]);
+
+        let iconsUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+        img[counter].src = iconsUrl;
+
+        forecast[counter].appendChild(img[counter]);
+        console.log(img[counter].src);
         // counter += 8;
         // console.log(img[i].src)
         counter++
