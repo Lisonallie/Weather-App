@@ -46,6 +46,18 @@ body {
     cursor: pointer;
 }
 
+.temp {
+    position: absolute;
+    margin-top: 6px;
+    margin-left: -10px;
+}
+
+.temp2 {
+    position: absolute;
+    margin-top: 6px;
+    margin-left: -10px;
+}
+
 #weather-container {
     width: 100vw;
     height: 100vh;
