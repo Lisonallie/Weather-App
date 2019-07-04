@@ -29,7 +29,18 @@ async function getWeather() {
         let temp = Math.floor(response.data.list[i].main.temp);
         let hi = Math.floor(response.data.list[i].main.temp_max);
         let lo = Math.floor(response.data.list[i].main.temp_min);
-        // let backIcon = response.data.list[0].weather[0].icon
+
+        let week = new Date();
+        let weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        let day = weekday[week.getDay()];
 
         // same as    forecast[i].innerHTML = temp + '<br>' + hi + '<br>' + lo + '<br>';
         forecast[counter].innerHTML = `${temp}<br> HI: ${hi}<br> LO: ${lo}`;
@@ -113,7 +124,7 @@ async function getWeather() {
             backbg.style.backgroundImage = "url('img/nightimg/mist_big.jpg')"
         }
 
-console.log(icon)
+        console.log(icon)
 
         counter++
     }
