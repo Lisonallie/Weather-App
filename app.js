@@ -21,7 +21,7 @@ input.addEventListener("keypress", function (e) {
 
 async function getWeather() {
     let city = input.value;
-    let api = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&mode=json&APPID=${key}`;
+    let api = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&mode=json&APPID=${key}`;
     let response = await axios.get(api);
     let counter = 0
 
@@ -53,7 +53,7 @@ async function getWeather() {
         // same as    forecast[i].innerHTML = temp + '<br>' + hi + '<br>' + lo + '<br>';
         forecast[counter].innerHTML = `${temp}<br> HI: ${hi}<br> LO: ${lo}`;
 
-        let iconsUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+        let iconsUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
         img[counter].src = iconsUrl;
 
         forecast[counter].appendChild(img[counter]);

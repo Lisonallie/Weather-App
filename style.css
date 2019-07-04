@@ -17,6 +17,8 @@ body {
     margin-top: 6%;
     color: white;
     font-weight: bold;
+    position: relative;
+    left: -20%;
 }
 
 .celcius {
@@ -28,6 +30,8 @@ body {
     margin-top: 6%;
     color: white;
     font-weight: bold;
+    position: relative;
+    left: -20%;
 }
 
 #weather-container {
