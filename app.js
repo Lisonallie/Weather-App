@@ -1,5 +1,6 @@
 const key = "00c6cccdf21220d91f2568a81e29690e";
 const input = document.getElementById("input");
+
 let motherBox = document.getElementById("mother-box");
 let forecast = document.querySelectorAll(".weathertext");
 let img = document.querySelectorAll(".icon");
@@ -39,8 +40,65 @@ async function getWeather() {
         forecast[counter].appendChild(img[counter]);
         // console.log(img[i].src)
 
-        if (icon == "01d") {
-            skiesbg[counter].appendChild()
+        if (icon === "01d") {
+            weatherBox[counter].style.backgroundImage = "url('img/dayimg/clearsky_small.jpg')";
+        }
+        if(icon === "01n") {
+            weatherBox[counter].style.backgroundImage = "url('img/nightimg/clearsky_small.jpeg')";
+        }
+        if(icon === "02d") {
+            weatherBox[counter].style.backgroundImage = "url('img/dayimg/fewclouds_small.jpeg')";
+        }
+        if(icon === "02n") {
+            weatherBox[counter].style.backgroundImage = "url('img/nightimg/fewclouds_small.jpg')";
+        }
+        if(icon === "03d") {
+            weatherBox[counter].style.backgroundImage = "url('img/dayimg/scatteredclouds_small.jpeg')";
+        }
+        if(icon === "03n") {
+            weatherBox[counter].style.backgroundImage = "url('img/nightimg/scatteredclouds_small.jpeg')";
+        }
+        if(icon === "04d") {
+            weatherBox[counter].style.backgroundImage = "url('img/dayimg/brokenclouds_small.jpeg')";
+        }
+        if(icon === "04n") {
+            weatherBox[counter].style.backgroundImage = "url('img/nightimg/brokenclouds_small.png')";
+        }
+        if(icon === "09d") {
+            weatherBox[counter].style.backgroundImage = "url('img/dayimg/showerrain_small.jpg')";
+        }
+        if(icon === "09n") {
+            weatherBox[counter].style.backgroundImage = "url('img/nightimg/showerrain_small.jpg')";
+        }
+        if(icon === "10d") {
+            weatherBox[counter].style.backgroundImage = "url('img/dayimg/rain_small.jpg')";
+        }
+        if(icon === "10n") {
+            weatherBox[counter].style.backgroundImage = "url('img/nightimg/rain_small.jpg')";
+        }
+        if(icon === "11d") {
+            weatherBox[counter].style.backgroundImage = "url('img/dayimg/thunderstorm_small.jpg')";
+        }
+        if(icon === "11n") {
+            weatherBox[counter].style.backgroundImage = "url('img/nightimg/thunderstorm_small.jpg')";
+        }
+        if(icon === "13d") {
+            weatherBox[counter].style.backgroundImage = "url('img/dayimg/snow_small.jpg')";
+        }
+        if(icon === "13n") {
+            weatherBox[counter].style.backgroundImage = "url('img/nightimg/snow_small.jpeg')";
+        }
+        if(icon === "50d") {
+            weatherBox[counter].style.backgroundImage = "url('img/dayimg/mist_small.jpg')";
+        }
+        if(icon === "50n") {
+            weatherBox[counter].style.backgroundImage = "url('img/nightimg/mist_small.jpg')";
+        }
+        if(icon === "01n") {
+            weatherBox[counter].style.backgroundImage = "url('')";
+        }
+        if(icon === "01n") {
+            weatherBox[counter].style.backgroundImage = "url('')";
         }
 
 
