@@ -29,8 +29,8 @@ async function getWeather() {
         let temp = Math.floor(response.data.list[i].main.temp);
         let hi = Math.floor(response.data.list[i].main.temp_max);
         let lo = Math.floor(response.data.list[i].main.temp_min);
-        console.log(response.data.list[i].weather[0].main)
-        
+        // let backIcon = response.data.list[0].weather[0].icon
+
         // same as    forecast[i].innerHTML = temp + '<br>' + hi + '<br>' + lo + '<br>';
         forecast[counter].innerHTML = `${temp}<br> HI: ${hi}<br> LO: ${lo}`;
 
@@ -42,63 +42,75 @@ async function getWeather() {
 
         if (icon === "01d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/clearsky_small.jpg')";
+            backbg.style.backgroundImage = "url('img/dayimg/clearsky_big.jpg')"
         }
-        if(icon === "01n") {
+        if (icon === "01n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/clearsky_small.jpeg')";
+            backbg.style.backgroundImage = "url('img/nightimg/clearsky_big.jpeg')"
         }
-        if(icon === "02d") {
+        if (icon === "02d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/fewclouds_small.jpeg')";
         }
-        if(icon === "02n") {
+        if (icon === "02n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/fewclouds_small.jpg')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "03d") {
+        if (icon === "03d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/scatteredclouds_small.jpeg')";
+
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "03n") {
+        if (icon === "03n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/scatteredclouds_small.jpeg')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "04d") {
+        if (icon === "04d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/brokenclouds_small.jpeg')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "04n") {
+        if (icon === "04n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/brokenclouds_small.png')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "09d") {
+        if (icon === "09d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/showerrain_small.jpg')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "09n") {
+        if (icon === "09n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/showerrain_small.jpg')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "10d") {
+        if (icon === "10d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/rain_small.jpg')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "10n") {
+        if (icon === "10n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/rain_small.jpg')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "11d") {
+        if (icon === "11d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/thunderstorm_small.jpg')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "11n") {
+        if (icon === "11n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/thunderstorm_small.jpg')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "13d") {
+        if (icon === "13d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/snow_small.jpg')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "13n") {
+        if (icon === "13n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/snow_small.jpeg')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "50d") {
+        if (icon === "50d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/mist_small.jpg')";
+            backbg.style.backgroundImage = "url('')"
         }
-        if(icon === "50n") {
+        if (icon === "50n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/mist_small.jpg')";
-        }
-        if(icon === "01n") {
-            weatherBox[counter].style.backgroundImage = "url('')";
-        }
-        if(icon === "01n") {
-            weatherBox[counter].style.backgroundImage = "url('')";
+            backbg.style.backgroundImage = "url('')"
         }
 
 
