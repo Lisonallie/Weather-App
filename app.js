@@ -4,6 +4,9 @@ let motherBox = document.getElementById("mother-box");
 let forecast = document.querySelectorAll(".weathertext");
 let img = document.querySelectorAll(".icon");
 
+let skiesbg = document.querySelectorAll(".skies");
+let weatherBox = document.querySelectorAll(".weather-box");
+let backbg = document.getElementById("weather-container");
 
 input.addEventListener("keypress", function (e) {
     if (e.keyCode == 13 || e.which == 13) {
@@ -25,6 +28,7 @@ async function getWeather() {
         let temp = Math.floor(response.data.list[i].main.temp);
         let hi = Math.floor(response.data.list[i].main.temp_max);
         let lo = Math.floor(response.data.list[i].main.temp_min);
+        console.log(response.data.list[i].weather[0].main)
         
         // same as    forecast[i].innerHTML = temp + '<br>' + hi + '<br>' + lo + '<br>';
         forecast[counter].innerHTML = `${temp}<br> HI: ${hi}<br> LO: ${lo}`;
@@ -33,8 +37,14 @@ async function getWeather() {
         img[counter].src = iconsUrl;
 
         forecast[counter].appendChild(img[counter]);
-        // counter += 8;
         // console.log(img[i].src)
+
+        if (icon == "01d") {
+            skiesbg[counter].appendChild()
+        }
+
+
+
         counter++
     }
 }
