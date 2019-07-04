@@ -9,6 +9,8 @@ let skiesbg = document.querySelectorAll(".skies");
 let weatherBox = document.querySelectorAll(".weather-box");
 let backbg = document.getElementById("weather-container");
 
+let displayDay = document.querySelectorAll(".day");
+
 input.addEventListener("keypress", function (e) {
     if (e.keyCode == 13 || e.which == 13) {
         motherBox.style.visibility = "visible";
@@ -31,7 +33,7 @@ async function getWeather() {
         let lo = Math.floor(response.data.list[i].main.temp_min);
 
         let week = new Date();
-        let weekday = new Array(7);
+        let weekday = new Array(11);
         weekday[0] = "Sunday";
         weekday[1] = "Monday";
         weekday[2] = "Tuesday";
@@ -39,9 +41,15 @@ async function getWeather() {
         weekday[4] = "Thursday";
         weekday[5] = "Friday";
         weekday[6] = "Saturday";
+        weekday[7] = "Sunday";
+        weekday[8] = "Monday";
+        weekday[9] = "Tuesday";
+        weekday[10] = "Wednesday";
 
-        let day = weekday[week.getDay()];
 
+        let day = weekday[week.getDay() + counter];
+
+        displayDay[counter].innerHTML = `${day}`;
         // same as    forecast[i].innerHTML = temp + '<br>' + hi + '<br>' + lo + '<br>';
         forecast[counter].innerHTML = `${temp}<br> HI: ${hi}<br> LO: ${lo}`;
 
@@ -49,8 +57,9 @@ async function getWeather() {
         img[counter].src = iconsUrl;
 
         forecast[counter].appendChild(img[counter]);
-        // console.log(img[i].src)
 
+
+        //referenced icon images from https://openweathermap.org/weather-conditions
         if (icon === "01d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/clearsky_small.jpg')";
             backbg.style.backgroundImage = "url('img/dayimg/clearsky_big.jpeg')"
@@ -123,8 +132,6 @@ async function getWeather() {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/mist_small.jpg')";
             backbg.style.backgroundImage = "url('img/nightimg/mist_big.jpg')"
         }
-
-        console.log(icon)
 
         counter++
     }
