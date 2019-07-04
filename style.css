@@ -10,7 +10,7 @@ body {
 
 .farenheit {
     background: rgb(177, 177, 177);
-    border: 2px solid white;
+    border: 1.5px solid white;
     border-radius: 5px;
     height: 30px;
     width: 30px;
@@ -18,12 +18,18 @@ body {
     color: white;
     font-weight: bold;
     position: relative;
-    left: -20%;
+    left: -19%;
+    text-align: center;
 }
 
-.celcius {
+.farenheit:hover {
+    background: rgb(107, 107, 107);
+    cursor: pointer;
+}
+
+.celsius {
     background: rgb(177, 177, 177);
-    border: 2px solid white;
+    border: 1.5px solid white;
     border-radius: 5px;
     height: 30px;
     width: 30px;
@@ -31,7 +37,13 @@ body {
     color: white;
     font-weight: bold;
     position: relative;
-    left: -20%;
+    left: -19%;
+    text-align: center;
+}
+
+.celsius:hover {
+    background: rgb(107, 107, 107);
+    cursor: pointer;
 }
 
 #weather-container {
