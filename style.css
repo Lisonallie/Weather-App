@@ -7,6 +7,29 @@ body {
     padding: 0;
     /* overflow: hidden; */
 }
+
+.farenheit {
+    background: rgb(177, 177, 177);
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    margin-top: 6%;
+    color: white;
+    font-weight: bold;
+}
+
+.celcius {
+    background: rgb(177, 177, 177);
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    margin-top: 6%;
+    color: white;
+    font-weight: bold;
+}
+
 #weather-container {
     width: 100vw;
     height: 100vh;
