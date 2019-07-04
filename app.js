@@ -42,7 +42,7 @@ async function getWeather() {
 
         if (icon === "01d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/clearsky_small.jpg')";
-            backbg.style.backgroundImage = "url('img/dayimg/clearsky_big.jpg')"
+            backbg.style.backgroundImage = "url('img/dayimg/clearsky_big.jpeg')"
         }
         if (icon === "01n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/clearsky_small.jpeg')";
@@ -50,70 +50,70 @@ async function getWeather() {
         }
         if (icon === "02d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/fewclouds_small.jpeg')";
+            backbg.style.backgroundImage = "url('img/dayimg/fewclouds_big.jpeg')"
         }
         if (icon === "02n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/fewclouds_small.jpg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/nightimg/fewclouds_big.jpeg')"
         }
         if (icon === "03d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/scatteredclouds_small.jpeg')";
-
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/dayimg/scatteredclouds_big.jpeg')"
         }
         if (icon === "03n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/scatteredclouds_small.jpeg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/nightimg/scatteredclouds_big.png')"
         }
         if (icon === "04d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/brokenclouds_small.jpeg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/dayimg/brokenclouds_big.jpeg')"
         }
         if (icon === "04n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/brokenclouds_small.png')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/nightimg/brokenclouds_big.jpg')"
         }
         if (icon === "09d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/showerrain_small.jpg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/dayimg/showerrain_big.jpeg')"
         }
         if (icon === "09n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/showerrain_small.jpg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/nightimg/showerrain_big.jpg')"
         }
         if (icon === "10d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/rain_small.jpg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/dayimg/rain_big.jpeg')"
         }
         if (icon === "10n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/rain_small.jpg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/nightimg/rain_big.png')"
         }
         if (icon === "11d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/thunderstorm_small.jpg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/dayimg/thunderstorm_big.jpg')"
         }
         if (icon === "11n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/thunderstorm_small.jpg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/nightimg/thunderstorm_big.jpg')"
         }
         if (icon === "13d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/snow_small.jpg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/dayimg/snow_big.jpeg')"
         }
         if (icon === "13n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/snow_small.jpeg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/nightimg/snow_big.jpg')"
         }
         if (icon === "50d") {
             weatherBox[counter].style.backgroundImage = "url('img/dayimg/mist_small.jpg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/dayimg/mist_big.jpg')"
         }
         if (icon === "50n") {
             weatherBox[counter].style.backgroundImage = "url('img/nightimg/mist_small.jpg')";
-            backbg.style.backgroundImage = "url('')"
+            backbg.style.backgroundImage = "url('img/nightimg/mist_big.jpg')"
         }
 
-
+console.log(icon)
 
         counter++
     }
