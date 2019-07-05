@@ -55,7 +55,7 @@ async function getWeather() {
 
         displayDay[counter].innerHTML = `${day}`;
         // same as    forecast[i].innerHTML = temp + '<br>' + hi + '<br>' + lo + '<br>';
-        forecast[counter].innerHTML = `${temp}<br> HI: ${hi}<br> LO: ${lo}`;
+        forecast[counter].innerHTML = `${temp}°<br> HI: ${hi}<br> LO: ${lo}`;
 
         let iconsUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
         img[counter].src = iconsUrl;
@@ -172,7 +172,7 @@ farenheit.addEventListener("click", async function () {
 
 
         // same as    forecast[i].innerHTML = temp + '<br>' + hi + '<br>' + lo + '<br>';
-        forecast[counter].innerHTML = `${temp}<br> HI: ${hi}<br> LO: ${lo}`;
+        forecast[counter].innerHTML = `${temp}°<br> HI: ${hi}<br> LO: ${lo}`;
 
         let iconsUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
         img[counter].src = iconsUrl;
@@ -199,7 +199,7 @@ celsius.addEventListener("click", async function () {
 
 
         // same as    forecast[i].innerHTML = temp + '<br>' + hi + '<br>' + lo + '<br>';
-        forecast[counter].innerHTML = `${temp}<br> HI: ${hi}<br> LO: ${lo}`;
+        forecast[counter].innerHTML = `${temp}°<br> HI: ${hi}<br> LO: ${lo}`;
 
         let iconsUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
         img[counter].src = iconsUrl;
